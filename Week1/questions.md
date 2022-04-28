@@ -35,3 +35,91 @@ int result = countGreaterThanTen(numeros);
 # Ejercicio de programación orientada a objetos
 
 Haga el cálculo de una factura que permite en ciertos momentos aplicar un descuento
+
+## Carácterísticas principales de la Programación Funcional
+
+### Funciones puras: 
+- No tiene efectos secundarios
+- Solo depende de las entradas $f(x)$.
+- No existe el concepto de variable global
+
+### Aplicación parcial:
+- Es posible invocar una función sin todos sur agumentos.
+
+### Orden superior:
+- Es posible pasarle una función a otra función $f(g(x))$
+
+```kotlin
+fun doble(x) {
+    return x + x
+}
+
+fun triple(x){
+    return x + x + x
+}
+
+fun main(){
+    var result = triple(doble(2))
+    // 12
+}
+```
+
+### Recursividad:
+
+- Se evitan los bucles y usa la recursividad
+
+### Inferencia de tipos:
+- Los típitos no son necesariamente estrictos.
+
+### Pereza:
+- Una expresión solo se evalúa sólo si es estrictamente necesario. Es decir, si una función siempre devuelve el mismo valor, no se ejecutan los argumentos.
+
+```kotlin
+fun doble(x) {
+    return x + x
+}
+
+fun constantFun(x){
+    // do something with x ...
+    return 32
+}
+
+fun main(){
+    var result = constantFun(doble(2))
+    // reult: 32
+}
+```
+
+En este caso, la función que se pasó como argumento a _constFun()_  no se ejecuta.
+
+
+
+# Programación Orientada a objetos:
+
+Conceptos y principios
+
+## Clases
+
+Es la abstracción de un objeto, contiene la informacion de sus atributos y métodos
+
+Un ejemplo en la vida real puede ser la clase persona, tiene características y también comportamientos que son comunes a todas las personas.
+
+## Objeto
+
+Es una instancia de una clase. Es la clase materializada.
+
+
+
+## Principios de POO:
+
+### SOLID
+
+- Single Responsability Principle: Una clase debería cumplir un único propósito.
+
+- Open Closed Principle: Una clase puede extenderse sin modificarla.
+
+- Liskov Substitution Principle: 
+
+### DRY: Don't Repeat Yourself
+
+

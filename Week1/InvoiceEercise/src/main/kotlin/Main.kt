@@ -18,11 +18,11 @@ fun main(){
     displayInvoice(invoice)
 }
 
-class Product(name: String, value: Float, includesIva: Boolean){
-    val name: String = name;
-    val value: Float = value;
-    val includesIva: Boolean = includesIva;
-}
+class Product(val name: String,
+              val value: Float,
+              var includesIva: Boolean = true,
+              var discount: MutableList<Discount> = mutableListOf<Discount>(),
+              ){}
 
 class Invoice (var products: MutableList<Product> = mutableListOf<Product>(),
                var discounts: MutableList<Discount> = mutableListOf<Discount>()
@@ -85,4 +85,13 @@ fun displayInvoice(invoice: Invoice){
     println("El valor total es:    $${invoice.total}")
     println("Decuentos:            $${invoice.totalDiscount}")
     println("Total a pagar:        $${invoice.totalWithDiscount}")
+}
+
+fun calcTotalDiscounts(discounts: MutableList<Discount>): Float {
+    // calculate total amount of discounts
+    var totalDiscount: Float = 0F
+    discounts.forEach{discount ->
+        totalDiscount += discount.value
+    }
+    return totalDiscount
 }
