@@ -140,3 +140,70 @@ fun isSunday(day: String) = day == "Sunday"
 ```
 
 The default value for a parameter doesn't have to be a value. It can be another function.
+
+## Get stated with filters
+
+excercise of filtering words that start with 'p'
+
+```kotlin
+// variables can be defined outside
+val decorations = listOf("rock", "pagoda", "plastic plant", "alligator", "flowerpot")
+
+fun main(){
+    // filter words starting with p
+    println( decorations.filter {it[0] == 'p'})
+}
+```
+
+There are two tipes of filters:
+
+### Eager filters: 
+the result list is created immediately
+
+### Lazy filters:
+The result list is created when accesed
+
+By default, filter in kotlin is eager. To make the filter lazy, you can use a <code>Sequence</code>, which is a collection that can only look at one item at a time, starting at the beginning, and going to the end. 
+
+
+// variables can be defined outside
+val decorations = listOf("rock", "pagoda", "plastic plant", "alligator", "flowerpot")
+
+```kotlin
+fun main(){
+    // filter words starting with p
+    println( decorations.filter {it[0] == 'p'})
+    /************** eager and lazy filters **************/
+    // eager, creates a new list
+    val eager = decorations.filter { it [0] == 'p' }
+    println("eager: $eager")
+
+    // Lay, will wait until asked to evaluate
+    val filtered = decorations.asSequence().filter { it[0] == 'p' }
+    println("filtered: $filtered")
+}
+
+/* 
+[pagoda, plastic plant]
+eager: [pagoda, plastic plant]
+filtered: kotlin.sequences.FilteringSequence@7a07c5b4
+*/
+
+```
+
+To visualize what's going on with the Sequence and lazy evaluation, use the map() function. The map() function performs a simple transformation on each element in the sequence.
+
+```kotlin
+    val lazyMap = decorations.asSequence().map {
+        println("access: $it")
+        // executes some code here
+        it
+    }
+
+    println("lazy: $lazyMap") // prints the kotlin secuence
+    println("-----")
+    println("first: ${lazyMap.first()}") // prints the first acces: rock
+    println("-----")
+    println("all: ${lazyMap.toList()}") // Prints all the elements and then returns the 
+
+```
