@@ -5,5 +5,5 @@ fun main(){
 
 // class concept
 class Person{
-    
+
 }
