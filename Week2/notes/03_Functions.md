@@ -20,3 +20,29 @@ println(message)
 // The water temperature is OK.
 ```
 
+### Create some functions 
+
+In this step, you put together some of what you've learned and create functions with different types. 
+
+```kotlin
+// Random and nextInt functions are defined in java.util
+import java.util.*
+
+fun feedTheFish() {
+    val day = randomDay()
+    val food = "pellets"
+    println("Today is $day and the fish eat $food")
+}
+
+fun randomDay(): String{
+    val week = arrayOf("Monday", "Tuesday", "Wednesday", "Thursday",
+        "Friday", "Saturday", "Sunday")
+    return week[Random().nextInt(week.size)]
+}
+
+fun main(args: Array<String>) {
+    feedTheFish()
+}
+```
+
+
