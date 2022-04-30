@@ -207,3 +207,52 @@ To visualize what's going on with the Sequence and lazy evaluation, use the map(
     println("all: ${lazyMap.toList()}") // Prints all the elements and then returns the 
 
 ```
+
+## Lambdas and higher-order functions
+
+### Lambdas 
+A lambda is an expression that makes a function. But instead of declaring a named function, you declare a function that has no name. Part of what makes this useful is that the lambda expression can now be passed as data. In other languages, lambdas are called anonymous functions, function literals, or similar names.
+
+### Higher order functions
+
+You can create a higher-order function by passing a lambda to another function. 
+<code> map </code> is a higher-order function, and the lambda you passed to it was the transformation to apply.
+
+## Homework
+
+### Question 1
+The contains(element: String) function returns true if the string element is contained in the string it's called on. What will be the output of the following code?
+
+val decorations = listOf ("rock", "pagoda", "plastic plant", "alligator", "flowerpot")
+
+println(decorations.filter {it.contains('p')})
+
+- [x] [pagoda, plastic, plant]
+
+- [ ] [pagoda, plastic plant]
+
+- [ ] [pagoda, plastic plant, flowerpot]
+
+- [ ] [rock, alligator]
+
+### Question 2
+In the following function definition, which one of the parameters is required? fun shouldChangeWater (day: String, temperature: Int = 22, dirty: Int = 20, numDecorations: Int = 0): Boolean {...}
+
+- [ ] numDecorations
+
+- [ ] dirty
+
+- [x] day
+
+- [ ] temperature
+
+### Question 3
+You can pass a regular named function (not the result of calling it) to another function. How would you pass increaseDirty( start: Int ) = start + 1 to updateDirty(dirty: Int, operation: (Int) -> Int)?
+
+- [ ] updateDirty(15, &increaseDirty())
+
+- [ ] updateDirty(15, increaseDirty())
+
+- [ ] updateDirty(15, ("increaseDirty()"))
+
+- [x] updateDirty(15, ::increaseDirty)
