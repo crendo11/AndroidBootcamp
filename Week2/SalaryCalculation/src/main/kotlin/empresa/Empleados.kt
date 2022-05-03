@@ -19,7 +19,7 @@ interface EmployeeSalary {
 // Create a class that implements Employee salary
 internal class CalculateTotalSalary(
     private val employeeHourCost: EmployeeHourCost,
-    val monthlyHours: EmployeeMonthlyHours,
+    monthlyHours: EmployeeMonthlyHours,
     val hasBonus: Boolean
 ) : EmployeeSalary {
     private val hourCost = employeeHourCost.cost
@@ -56,7 +56,7 @@ class Operator(override val hasBonus: Boolean = false) : Employee(),
     override val workedHours: Double = EmployeeMonthlyHours.OPERADOR.hours
     override val salary: Double
         get() = hourCost * workedHours
-    
+
 }
 
 class Account(override val hasBonus: Boolean = false) : Employee(),
