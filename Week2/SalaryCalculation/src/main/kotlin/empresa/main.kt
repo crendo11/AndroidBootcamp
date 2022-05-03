@@ -7,7 +7,7 @@ fun main() {
     val emp = getEmployee(option)
     val salary = emp?.calcTotalSalary()?: 0.0
     // get name
-    val name = emp?.type?.name?: "No name"
+    val name = emp?.type?.name?: "NO NAME"
     println("El salario del ${name.lowercase()} es de $$salary")
 }
 

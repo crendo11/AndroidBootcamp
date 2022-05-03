@@ -14,21 +14,34 @@ abstract class Employee: EmployeeSalary{
 interface EmployeeSalary {
     fun calcTotalSalary(): Double
 }
+// Create a class that implements Employee salary
+internal class CalculateTotalSalary(private val employeeHourCost: EmployeeHourCost,
+                                    val monthlyHours: EmployeeMonthlyHours,
+                                    val hasBonus: Boolean): EmployeeSalary {
+    private val hourCost = employeeHourCost.cost
+    private val workedHours = monthlyHours.hours
+    private val salary: Double
+        get() = hourCost * workedHours
+    override fun calcTotalSalary(): Double{
+        return salary + calcBonus(hourCost, hasBonus)
+    }
+}
 
 /************* Classes **************/
-class Manager(override val hasBonus: Boolean = false): Employee() {
+class Manager(override val hasBonus: Boolean = false): Employee(),
+    EmployeeSalary by CalculateTotalSalary(EmployeeHourCost.GERENTE,
+    EmployeeMonthlyHours.GERENTE, hasBonus) {
+
     override val type = EmployeeType.GERENTE
     override val hourCost = EmployeeHourCost.GERENTE.cost
     override val workedHours: Double = EmployeeMonthlyHours.GERENTE.hours
     override val salary: Double
         get() = hourCost * workedHours
-
-    override fun calcTotalSalary():Double  {
-        return salary + calcBonus(hourCost, hasBonus)
-    }
 }
 
-class Operator(override val hasBonus: Boolean = false): Employee() {
+class Operator(override val hasBonus: Boolean = false): Employee(),
+    EmployeeSalary by CalculateTotalSalary(EmployeeHourCost.OPERADOR,
+        EmployeeMonthlyHours.OPERADOR, hasBonus){
     override val type: EmployeeType = EmployeeType.OPERADOR
     override val hourCost = EmployeeHourCost.OPERADOR.cost
     override val workedHours: Double = EmployeeMonthlyHours.OPERADOR.hours
@@ -40,7 +53,9 @@ class Operator(override val hasBonus: Boolean = false): Employee() {
     }
 }
 
-class Account(override val hasBonus: Boolean = false): Employee() {
+class Account(override val hasBonus: Boolean = false): Employee(),
+    EmployeeSalary by CalculateTotalSalary(EmployeeHourCost.CONTADOR,
+        EmployeeMonthlyHours.CONTADOR, hasBonus){
     override val type: EmployeeType = EmployeeType.CONTADOR
     override val hourCost = EmployeeHourCost.CONTADOR.cost
     override val workedHours: Double = EmployeeMonthlyHours.CONTADOR.hours
