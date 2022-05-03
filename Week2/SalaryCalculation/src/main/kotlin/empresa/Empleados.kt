@@ -47,10 +47,7 @@ class Operator(override val hasBonus: Boolean = false): Employee(),
     override val workedHours: Double = EmployeeMonthlyHours.OPERADOR.hours
     override val salary: Double
         get() = hourCost * workedHours
-
-    override fun calcTotalSalary():Double  {
-        return salary + calcBonus(hourCost, hasBonus)
-    }
+    
 }
 
 class Account(override val hasBonus: Boolean = false): Employee(),
@@ -62,9 +59,6 @@ class Account(override val hasBonus: Boolean = false): Employee(),
     override val salary: Double
         get() = hourCost * workedHours
 
-    override fun calcTotalSalary():Double  {
-        return salary + calcBonus(hourCost, hasBonus)
-    }
 }
 
 /************* Enums **************/
