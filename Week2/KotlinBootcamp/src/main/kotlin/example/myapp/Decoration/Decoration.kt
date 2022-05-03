@@ -33,7 +33,7 @@ fun makeDecorations() {
     println(wood)
     println(diver)
 
-    // try class enum 
+    // try class enum
     println(Direction.EAST.name)
     println(Direction.EAST.ordinal)
     println(Direction.EAST.degrees)
