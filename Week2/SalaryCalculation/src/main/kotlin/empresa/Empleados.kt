@@ -1,12 +1,12 @@
-package Empresa
+package empresa
 /************* Constants **************/
 const val BONUS_HOURS = 10
 
 /************* Abstractions **************/
-abstract class Employee{
+abstract class Employee: EmployeeSalary{
     abstract val type: EmployeeType
-    abstract val hourCost: Double
-    abstract val workedHours: Double
+    internal abstract val hourCost: Double
+    internal abstract val workedHours: Double
     abstract val hasBonus: Boolean
     abstract val salary: Double
 }
@@ -16,7 +16,7 @@ interface EmployeeSalary {
 }
 
 /************* Classes **************/
-class Manager(override val hasBonus: Boolean = false): Employee(), EmployeeSalary {
+class Manager(override val hasBonus: Boolean = false): Employee() {
     override val type = EmployeeType.GERENTE
     override val hourCost = EmployeeHourCost.GERENTE.cost
     override val workedHours: Double = EmployeeMonthlyHours.GERENTE.hours
@@ -28,7 +28,7 @@ class Manager(override val hasBonus: Boolean = false): Employee(), EmployeeSalar
     }
 }
 
-class Operator(override val hasBonus: Boolean = false): Employee(), EmployeeSalary {
+class Operator(override val hasBonus: Boolean = false): Employee() {
     override val type: EmployeeType = EmployeeType.OPERADOR
     override val hourCost = EmployeeHourCost.OPERADOR.cost
     override val workedHours: Double = EmployeeMonthlyHours.OPERADOR.hours
@@ -40,7 +40,7 @@ class Operator(override val hasBonus: Boolean = false): Employee(), EmployeeSala
     }
 }
 
-class Account(override val hasBonus: Boolean = false): Employee(), EmployeeSalary {
+class Account(override val hasBonus: Boolean = false): Employee() {
     override val type: EmployeeType = EmployeeType.CONTADOR
     override val hourCost = EmployeeHourCost.CONTADOR.cost
     override val workedHours: Double = EmployeeMonthlyHours.CONTADOR.hours
@@ -57,11 +57,11 @@ enum class EmployeeType(val empType: Int){
     GERENTE(1), OPERADOR(2), CONTADOR(3)
 }
 
-enum class EmployeeHourCost(val cost: Double) {
+internal enum class EmployeeHourCost(val cost: Double) {
     GERENTE(200.00), OPERADOR(10.00), CONTADOR(50.00)
 }
 
-enum class EmployeeMonthlyHours(val hours: Double){
+internal enum class EmployeeMonthlyHours(val hours: Double){
     GERENTE(200.00), OPERADOR(230.00), CONTADOR(200.00)
 }
 

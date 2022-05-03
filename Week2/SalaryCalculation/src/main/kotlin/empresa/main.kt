@@ -1,4 +1,4 @@
-package Empresa
+package empresa
 
 fun main() {
     // get user input
@@ -7,7 +7,7 @@ fun main() {
     val emp = getEmployee(option)
     val salary = emp?.calcTotalSalary()?: 0.0
     // get name
-    val name = getEmployeeName(option)
+    val name = emp?.type?.name?: "No name"
     println("El salario del ${name.lowercase()} es de $$salary")
 }
 
@@ -17,7 +17,7 @@ fun getUserInput(): Int {
     return readLine()!!.toInt()
 }
 
-fun getEmployee(option: Int): EmployeeSalary?{
+fun getEmployee(option: Int): Employee?{
     return when (option) {
         EmployeeType.GERENTE.empType ->  Manager()
         EmployeeType.OPERADOR.empType ->  Operator(true)
@@ -26,15 +26,5 @@ fun getEmployee(option: Int): EmployeeSalary?{
             println( "Has ingresado una opcion incorrecta" )
             return null
         }
-    }
-}
-
-
-fun getEmployeeName (option: Int): String{
-    return when (option){
-        EmployeeType.GERENTE.empType ->  EmployeeType.GERENTE.name
-        EmployeeType.OPERADOR.empType ->  EmployeeType.OPERADOR.name
-        EmployeeType.CONTADOR.empType ->   EmployeeType.CONTADOR.name
-        else -> ""
     }
 }
