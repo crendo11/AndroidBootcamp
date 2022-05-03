@@ -51,3 +51,50 @@ var volume: Int
     }
 ```
 
+## Subclasses and Inheritance
+
+In Kotlin, by default, classes cannot be subclassed. Similarly, properties and member variables cannot be overridden by subclasses (though they can be accessed).
+
+You must mark a class as <code>open</code> to allow it to be subclassed. Similarly, you must mark properties and member variables as open, in order to override them in the subclass. The <code>open</code> keyword is required, to prevent accidentally leaking implementation details as part of the class's interface.
+
+## Abstract Classes and Interfaces
+
+Sometimes you want to define common behavior or properties to be shared among some related classes
+
+- Neither an abstract class nor an interface can be instantiated on its own, which means you cannot create objects of those types directly.
+- Abstract classes have constructors.
+- Interfaces can't have any constructor logic or store any state.
+
+### When to use abstract classes versus interfaces
+
+Abstract classes have constructors, and interfaces cannot, but otherwise they are similar. 
+When you use interfaces to compse a class. the class's functionality is extended by way of the class instances that it contains. Composition tends to make code easier to reuse and reason about than inheritance from abstract class.
+Also, you can use multiple interfaces in a class, but you can only subclass from one abstract class.
+
+Use an interface if you have a lot of methods and one or two default implementations, for example as in AquariumAction below.
+
+```kotlin
+interface AquariumAction {
+    fun eat()
+    fun jump()
+    fun clean()
+    fun catchFish()
+    fun swim()  {
+        println("swim")
+    }
+}
+```
+
+Use an abstract class any time you can't complete a class. For example, going back to the AquariumFish class, you can make all AquariumFish implement FishAction, and provide a default implementation for eat while leaving color abstract, because there isn't really a default color for fish.
+
+```kotlin
+interface FishAction  {
+    fun eat()
+}
+
+abstract class AquariumFish: FishAction {
+   abstract val color: String
+   override fun eat() = println("yum")
+}
+```
+
