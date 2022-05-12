@@ -8,5 +8,7 @@
     <string name="hello_stop">Hello onStop!</string>
     <string name="hello_destroy">Hello onDestroy!</string>
     <string name="main_button">Tap me!</string>
+    <string name="airplane_mode_enabled">Modo avión activado</string>
+    <string name="airplane_mode_disabled">Modo avión desactivado</string>s
 
 </resources>
