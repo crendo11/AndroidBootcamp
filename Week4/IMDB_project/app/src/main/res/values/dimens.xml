@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="multiplier_50sp">100sp</dimen>
+    <dimen name="multiplier_24sp">38sp</dimen>
+    <dimen name="multiplier_20">40dp</dimen>
+    <dimen name="multiplier_30">60dp</dimen>
+    <dimen name="multiplier_25">50dp</dimen>
+    <dimen name="multiplier_5">10dp</dimen>
+    <dimen name="multiplier_7sp">14sp</dimen>
+    <dimen name="multiplier_5sp">10sp</dimen>
+</resources>

@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_yellow"
+    android:orientation="vertical"
+    android:gravity="center">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:text="@string/app_name"
+        style="@style/header_title"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Layout for input username -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginBottom="@dimen/multiplier_5"
+            style="@style/text_input_layout">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/username"
+                android:layout_marginBottom="@dimen/multiplier_5"
+                style="@style/text_input_hint" />
+
+            <EditText
+                android:id="@+id/userEmailAddress"
+                android:layout_weight="1"
+                android:inputType="textEmailAddress"
+                android:autofillHints="emailAddress"
+                style="@style/app_input" />
+        </LinearLayout>
+
+        <!-- Layout for input password -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            style="@style/text_input_layout">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/password"
+                android:layout_marginBottom="@dimen/multiplier_5"
+                style="@style/text_input_hint" />
+
+            <EditText
+                android:id="@+id/password"
+                style="@style/app_input"
+                android:layout_weight="1"
+                android:autofillHints="password"
+                android:inputType="textPassword" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/forgot_password"
+                android:textSize="@dimen/multiplier_5sp"
+                android:textStyle="italic"/>
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+
+</LinearLayout>
