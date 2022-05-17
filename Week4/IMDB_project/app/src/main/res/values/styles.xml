@@ -22,12 +22,18 @@
     <style name="login_layout">
         <item name="android:paddingStart">@dimen/multiplier_30</item>
         <item name="android:paddingEnd">@dimen/multiplier_30</item>
+        <item name="android:layout_marginVertical">@dimen/multiplier_20</item>
     </style>
 
     <style name="sign_in_method_button">
         <item name="android:layout_width">@dimen/multiplier_25</item>
         <item name="android:layout_height">@dimen/multiplier_25</item>
+        <item name="android:layout_marginEnd">@dimen/multiplier_10</item>
         <item name="android:background">@drawable/circle_buttons_login</item>
+    </style>
+
+    <style name="secondary_text_size">
+        <item name="android:textSize">@dimen/multiplier_8sp</item>
     </style>
 
 </resources>

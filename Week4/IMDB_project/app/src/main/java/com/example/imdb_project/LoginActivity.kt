@@ -9,4 +9,6 @@ class LoginActivity : AppCompatActivity(){
         super.onCreate(savedInstanceState)
         setContentView(R.layout.login_activity)
     }
+
+
 }

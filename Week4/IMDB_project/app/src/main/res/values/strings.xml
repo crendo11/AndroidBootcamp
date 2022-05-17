@@ -7,4 +7,7 @@
     <string name="or_you_can_sign_in_with">Or you can sign in with</string>
     <string name="login" translatable="false">Login</string>
     <string name="login_with_apple">Login with apple</string>
+    <string name="continue_as_guest">Continue as guest</string>
+    <string name="dont_have_an_account">Don\'t have an account?</string>
+    <string name="register">Register</string>
 </resources>

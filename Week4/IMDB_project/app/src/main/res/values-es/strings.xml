@@ -6,4 +6,7 @@
     <string name="forgot_password">¿Olvidaste la contraseña?</string>
     <string name="or_you_can_sign_in_with">O podes ingresar con</string>
     <string name="login_with_apple">Inicia sesión con Apple</string>
+    <string name="continue_as_guest">Continuar como invitado</string>
+    <string name="dont_have_an_account">¿No tienes cuenta?</string>
+    <string name="register">Register</string>
 </resources>
