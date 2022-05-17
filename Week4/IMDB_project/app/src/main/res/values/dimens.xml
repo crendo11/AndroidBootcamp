@@ -8,4 +8,6 @@
     <dimen name="multiplier_5">10dp</dimen>
     <dimen name="multiplier_7sp">14sp</dimen>
     <dimen name="multiplier_5sp">10sp</dimen>
+    <dimen name="multiplier_8sp">16sp</dimen>
+    <dimen name="multiplier_10">20dp</dimen>
 </resources>

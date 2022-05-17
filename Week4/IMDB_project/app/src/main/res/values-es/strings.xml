@@ -4,4 +4,6 @@
     <string name="username">Usuario</string>
     <string name="password">Contraseña</string>
     <string name="forgot_password">¿Olvidaste la contraseña?</string>
+    <string name="or_you_can_sign_in_with">O podes ingresar con</string>
+    <string name="login_with_apple">Inicia sesión con Apple</string>
 </resources>

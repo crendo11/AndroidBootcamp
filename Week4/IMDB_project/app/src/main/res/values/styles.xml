@@ -10,13 +10,7 @@
     <style name="header_title">
         <item name="android:textColor">@color/black</item>
         <item name="android:fontFamily">@font/impact</item>
-        <item name="android:textSize">@dimen/multiplier_24sp</item>
-    </style>
-
-    <style name="app_input">
-        <item name="android:layout_width">match_parent</item>
-        <item name="android:layout_height">@dimen/multiplier_25</item>
-        <item name="android:background">@drawable/rounded_corner_view</item>
+        <item name="android:textSize">@dimen/multiplier_30</item>
     </style>
 
     <style name="text_input_hint">
@@ -25,10 +19,15 @@
         <item name="android:textSize">@dimen/multiplier_8sp</item>
     </style>
 
-    <style name="text_input_layout">
+    <style name="login_layout">
         <item name="android:paddingStart">@dimen/multiplier_30</item>
         <item name="android:paddingEnd">@dimen/multiplier_30</item>
     </style>
 
-    <dimen name="multiplier_8sp">16sp</dimen>
+    <style name="sign_in_method_button">
+        <item name="android:layout_width">@dimen/multiplier_25</item>
+        <item name="android:layout_height">@dimen/multiplier_25</item>
+        <item name="android:background">@drawable/circle_buttons_login</item>
+    </style>
+
 </resources>
