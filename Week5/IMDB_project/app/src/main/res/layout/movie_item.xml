@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/multiplier_90"
+    android:padding="@dimen/multiplier_10"
+    android:background="@drawable/movie_item_border">
+
+    <ImageView
+        android:id="@+id/movieThumbnail"
+        android:layout_width="@dimen/multiplier_50"
+        android:layout_height="match_parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:contentDescription="@string/movie_image_res_description">
+    </ImageView>
+
+    <TextView
+        android:id="@+id/movieTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/multiplier_5"
+        android:text="@string/movie_title_holder"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toEndOf="@+id/movieThumbnail"
+        app:layout_constraintTop_toTopOf="parent"
+        android:fontFamily="@font/seconda_round_bold"
+        style="@style/movie_description_margins">
+    </TextView>
+
+    <TextView
+        android:id="@+id/movieYear"
+        style="@style/movie_description_margins"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/multiplier_5"
+        android:text="@string/movie_year_placeholder"
+        android:fontFamily="@font/seconda_round_medium"
+        android:textColor="@color/text_gray"
+        app:layout_constraintStart_toEndOf="@+id/movieThumbnail"
+        app:layout_constraintTop_toBottomOf="@+id/movieTitle">
+
+    </TextView>
+
+    <TextView
+        android:id="@+id/movieActors"
+        style="@style/movie_description_margins"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/seconda_round_medium"
+        android:layout_marginTop="@dimen/multiplier_25"
+        android:text="@string/actors_placeholder"
+        android:textColor="@color/text_gray"
+        app:layout_constraintStart_toEndOf="@+id/movieThumbnail"
+        app:layout_constraintTop_toBottomOf="@+id/movieYear">
+    </TextView>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

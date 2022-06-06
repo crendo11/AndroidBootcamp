@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">IMDb</string>
+    <string name="username">Usuario</string>
+    <string name="password">Contraseña</string>
+    <string name="forgot_password">¿Olvidaste la contraseña?</string>
+    <string name="or_you_can_sign_in_with">O podes ingresar con</string>
+    <string name="login_with_apple">Inicia sesión con Apple</string>
+    <string name="continue_as_guest">Continuar como invitado</string>
+    <string name="dont_have_an_account">¿No tienes cuenta?</string>
+    <string name="register">Register</string>
+    <string name="search_hint">Buscar IMDb</string>
+    <string name="movie_title_holder">Título</string>
+    <string name="movie_year_placeholder">Año</string>
+    <string name="movie_image_res_description">Imagen de la Película</string>
+    <string name="actors_placeholder">Actores</string>
+</resources>

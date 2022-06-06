@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/app_yellow"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <TextView
+        style="@style/header_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:text="@string/app_name" />
+
+    <!-- Layout for login form -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        style="@style/login_layout">
+
+            <TextView
+                style="@style/text_input_hint"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/multiplier_5"
+                android:text="@string/username" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/usernameInput"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/rounded_corner_view"
+                    android:textColor="@color/text_gray" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                style="@style/text_input_hint"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/multiplier_5"
+                android:text="@string/password" />
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/password_input"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/rounded_corner_view"
+                    android:inputType="textPassword"
+                    android:textColor="@color/text_gray"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/forgot_password"
+                android:textSize="@dimen/multiplier_5sp"
+                android:textStyle="italic"
+                android:layout_marginBottom="@dimen/multiplier_5"/>
+
+            <Button
+                android:id="@+id/login_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/disabled_button_color"
+                android:text="@string/login"
+                android:height="@dimen/multiplier_30"
+                android:enabled="false"/>
+
+    </LinearLayout>
+
+    <!-- Layout for other login methods -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/or_you_can_sign_in_with"
+            android:gravity="center"
+            android:textColor="@color/text_gray"
+            android:textStyle="italic"
+            style="@style/secondary_text_size"/>
+
+        <!-- Layout for other login methods -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginTop="@dimen/multiplier_10"
+            android:layout_marginVertical="@dimen/multiplier_10">
+
+            <ImageButton
+                android:id="@+id/apple_login_button"
+                android:src="@drawable/ic_apple"
+                android:contentDescription="@string/login_with_apple"
+                style="@style/sign_in_method_button" />
+
+            <ImageButton
+                android:id="@+id/facebook_login_button"
+                style="@style/sign_in_method_button"
+                android:contentDescription="@string/login_with_apple"
+                android:src="@drawable/ic_facebook" />
+
+            <ImageButton
+                android:id="@+id/google_login_button"
+                style="@style/sign_in_method_button"
+                android:contentDescription="@string/login_with_apple"
+                android:src="@drawable/ic_google" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginBottom="@dimen/multiplier_10">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/dont_have_an_account"
+                android:gravity="center"
+                android:textColor="@color/black"
+                android:layout_marginEnd="@dimen/multiplier_5"
+                style="@style/secondary_text_size"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/register"
+                android:gravity="center"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                style="@style/secondary_text_size"/>
+
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/continue_as_guest"
+            android:gravity="center"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            style="@style/secondary_text_size"/>
+
+
+    </LinearLayout>
+
+
+</LinearLayout>
