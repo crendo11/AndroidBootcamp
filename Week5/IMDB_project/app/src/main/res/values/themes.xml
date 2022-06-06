@@ -12,9 +12,7 @@
         <!-- Status bar color. -->
         <item name="android:statusBarColor" tools:targetApi="l">@color/app_yellow</item>
         <!-- Customize your theme here. -->
+        <item name="hintTextColor">@color/black</item>
     </style>
 
-    <style name="AppTextInputLaout" parent="Widget.Design.TextInputLayout">
-        <item name="paddingStart">48dp</item>
-    </style>
 </resources>

@@ -31,8 +31,7 @@
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/usernameInput"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                app:helperTextTextAppearance="@style/text_edit_style">
+                android:layout_height="wrap_content">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"

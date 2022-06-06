@@ -36,4 +36,8 @@
         <item name="android:textSize">@dimen/multiplier_8sp</item>
     </style>
 
+    <style name="movie_description_margins">
+        <item name="android:layout_marginStart">@dimen/multiplier_10</item>
+    </style>
+
 </resources>

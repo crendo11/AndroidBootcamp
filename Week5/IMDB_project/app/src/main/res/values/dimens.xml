@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <dimen name="multiplier_50sp">100sp</dimen>
-    <dimen name="multiplier_24sp">38sp</dimen>
     <dimen name="multiplier_20">40dp</dimen>
     <dimen name="multiplier_30">60dp</dimen>
     <dimen name="multiplier_25">50dp</dimen>
     <dimen name="multiplier_5">10dp</dimen>
-    <dimen name="multiplier_7sp">14sp</dimen>
     <dimen name="multiplier_5sp">10sp</dimen>
     <dimen name="multiplier_8sp">16sp</dimen>
     <dimen name="multiplier_10">20dp</dimen>
+    <dimen name="multiplier_75">150dp</dimen>
+    <dimen name="multiplier_90">180dp</dimen>
+    <dimen name="multiplier_50">100dp</dimen>
 </resources>
