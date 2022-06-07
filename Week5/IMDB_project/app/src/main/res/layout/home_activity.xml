@@ -1,26 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:background="@color/white">
 
-    <SearchView
+    <FrameLayout
+        android:id="@+id/fl_main_fragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation_view"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="@dimen/multiplier_10"
-        android:background="@drawable/rounded_search_view"
-        android:queryHint="@string/search_hint">
-    </SearchView>
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/rounded_corners_menu"
+        app:itemIconTint="@color/navigation_icons_color"
+        app:itemTextColor="@color/navigation_icons_color"
+        app:menu="@menu/bottom_nav_menu">
+    </com.google.android.material.bottomnavigation.BottomNavigationView>
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/movieList"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="@color/light_gray"
-        android:paddingStart="@dimen/multiplier_10"
-        android:paddingEnd="@dimen/multiplier_10">
-
-    </androidx.recyclerview.widget.RecyclerView>
-
-</LinearLayout>
+</RelativeLayout>

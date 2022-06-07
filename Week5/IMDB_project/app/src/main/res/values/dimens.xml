@@ -11,4 +11,12 @@
     <dimen name="multiplier_75">150dp</dimen>
     <dimen name="multiplier_90">180dp</dimen>
     <dimen name="multiplier_50">100dp</dimen>
+    <dimen name="multiplier_135">270dp</dimen>
+    <dimen name="multiplier_85">170dp</dimen>
+    <dimen name="multiplier_15">30dp</dimen>
+    <dimen name="multiplier_175">250dp</dimen>
+    <dimen name="multiplier_170">340dp</dimen>
+    <dimen name="multiplier_45">90dp</dimen>
+    <dimen name="multiplier_180">260dp</dimen>
+    <dimen name="multiplier_145">290dp</dimen>
 </resources>

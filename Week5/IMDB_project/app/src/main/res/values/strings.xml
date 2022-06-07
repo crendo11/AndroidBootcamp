@@ -15,4 +15,16 @@
     <string name="movie_year_placeholder">Year</string>
     <string name="movie_image_res_description">Movie Image</string>
     <string name="actors_placeholder">Actors</string>
+    <string name="title_httyd">How to train your dragon</string>
+    <string name="description_httyd">brief movie description</string>
+    <string name="queen_south_title">Queen of the South</string>
+    <string name="description_queen_south">Description of Queen of the south</string>
+    <string name="home">Home</string>
+    <string name="search">Search</string>
+    <string name="play" translatable="false">Play</string>
+    <string name="stranger_things_movie_trailer">Stranger things movie trailer</string>
+    <string name="stranger_things" translatable="false">Stranger Things</string>
+    <string name="official_trailer">Official trailer</string>
+    <string name="thumbnail_stranger_things">Thumbnail Stranger Things</string>
+    <string name="play_button">Play button</string>
 </resources>

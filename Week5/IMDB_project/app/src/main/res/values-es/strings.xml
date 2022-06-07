@@ -14,4 +14,14 @@
     <string name="movie_year_placeholder">Año</string>
     <string name="movie_image_res_description">Imagen de la Película</string>
     <string name="actors_placeholder">Actores</string>
+    <string name="title_httyd">How to train your dragon</string>
+    <string name="description_httyd">brief movie description</string>
+    <string name="queen_south_title">Queen of the South</string>
+    <string name="description_queen_south">Description of Queen of the south</string>
+    <string name="home">Inicio</string>
+    <string name="search">Buscar</string>
+    <string name="stranger_things_movie_trailer">trailer de Stranger Things</string>
+    <string name="official_trailer">Trailer Oficial</string>
+    <string name="thumbnail_stranger_things">Portada Stranger Things</string>
+    <string name="play_button">Botón para reproducir</string>
 </resources>
