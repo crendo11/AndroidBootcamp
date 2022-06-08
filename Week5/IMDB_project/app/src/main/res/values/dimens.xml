@@ -19,4 +19,10 @@
     <dimen name="multiplier_45">90dp</dimen>
     <dimen name="multiplier_180">260dp</dimen>
     <dimen name="multiplier_145">290dp</dimen>
+    <dimen name="multiplier_10sp">20sp</dimen>
+    <dimen name="multiplier_3sp">6sp</dimen>
+    <dimen name="multiplier_4sp">8sp</dimen>
+    <dimen name="multiplier_4">8dp</dimen>
+    <dimen name="multiplier_8">16dp</dimen>
+    <dimen name="multiplier_60">120dp</dimen>
 </resources>

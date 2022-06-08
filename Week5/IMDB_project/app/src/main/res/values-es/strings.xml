@@ -24,4 +24,7 @@
     <string name="official_trailer">Trailer Oficial</string>
     <string name="thumbnail_stranger_things">Portada Stranger Things</string>
     <string name="play_button">Botón para reproducir</string>
+    <string name="best_selections">Las mejores selecciones</string>
+    <string name="movie_thumbnail">Miniatura de la película</string>
+    <string name="movie_rating">Movie rating</string>
 </resources>

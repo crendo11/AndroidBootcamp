@@ -27,4 +27,7 @@
     <string name="official_trailer">Official trailer</string>
     <string name="thumbnail_stranger_things">Thumbnail Stranger Things</string>
     <string name="play_button">Play button</string>
+    <string name="best_selections">Best Selections</string>
+    <string name="movie_thumbnail">Movie thumbnail</string>
+    <string name="movie_rating">Movie rating</string>
 </resources>

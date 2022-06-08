@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/light_gray">
@@ -77,6 +78,33 @@
         app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior"
         android:layout_marginTop="@dimen/multiplier_10">
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:paddingStart="@dimen/multiplier_10"
+            android:paddingBottom="@dimen/multiplier_10"
+            android:orientation="vertical"
+            tools:ignore="RtlSymmetry">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingStart="@dimen/multiplier_10"
+                android:layout_marginTop="@dimen/multiplier_10"
+                android:textSize="@dimen/multiplier_10sp"
+                android:textColor="@color/black"
+                android:text="@string/best_selections"
+                android:background="@drawable/title_text_border"
+                android:fontFamily="@font/seconda_round_bold" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/homeRecyclerView"
+                android:layout_marginTop="@dimen/multiplier_15"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
 
     </androidx.core.widget.NestedScrollView>
 
