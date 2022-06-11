@@ -80,19 +80,21 @@
 
         <LinearLayout
             tools:ignore="RtlSymmetry"
-            style="@style/imdb_section">
+            style="@style/imdb_section"
+            android:paddingTop="@dimen/multiplier_10"
+            android:paddingBottom="@dimen/multiplier_10"
+            android:paddingStart="@dimen/multiplier_10">
 
             <com.example.imdb_project.views.SectionTitleView
                 android:id="@+id/bestSelectionsTitle"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"/>
+                android:layout_height="wrap_content" />
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/homeRecyclerView"
                 android:layout_marginTop="@dimen/multiplier_15"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"/>
 
         </LinearLayout>
 

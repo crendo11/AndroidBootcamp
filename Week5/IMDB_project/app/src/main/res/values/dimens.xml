@@ -26,4 +26,10 @@
     <dimen name="multiplier_8">16dp</dimen>
     <dimen name="multiplier_60">120dp</dimen>
     <dimen name="multiplier_12sp">24sp</dimen>
+    <dimen name="multiplier_17">34dp</dimen>
+    <dimen name="multiplier_3">6dp</dimen>
+    <dimen name="multiplier_2">4dp</dimen>
+    <dimen name="multiplier_80">160dp</dimen>
+    <dimen name="multiplier_120">240dp</dimen>
+    <dimen name="multiplier_70">140dp</dimen>
 </resources>

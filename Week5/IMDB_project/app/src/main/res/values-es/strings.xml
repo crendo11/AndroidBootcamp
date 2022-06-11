@@ -28,4 +28,15 @@
     <string name="movie_thumbnail">Miniatura de la película</string>
     <string name="movie_rating">Movie rating</string>
     <string name="section_title_holder">Section title</string>
+    <string name="info_button">Botón de información</string>
+    <string name="bookmark_movie">Guardar película</string>
+    <string name="number_of_stars">Puntuación</string>
+    <string name="toolbar_title_placeholder">Título</string>
+    <string name="original_title">Título original</string>
+    <string name="short_description">Descripción corta</string>
+    <string name="movie_preview">Imagen de la película</string>
+    <string name="genre">-Género</string>
+    <string name="movie_description_placeholder">Sinópsis de la película</string>
+    <string name="episodes_guide">Guía de episodios</string>
+    <string name="number_episodes">Número de episodios</string>
 </resources>

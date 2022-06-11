@@ -31,4 +31,15 @@
     <string name="movie_thumbnail">Movie thumbnail</string>
     <string name="movie_rating">Movie rating</string>
     <string name="section_title_holder">Section title</string>
+    <string name="info_button">Info button</string>
+    <string name="bookmark_movie">Bookmark movie</string>
+    <string name="number_of_stars">Number of stars</string>
+    <string name="toolbar_title_placeholder">Title</string>
+    <string name="original_title">Original title</string>
+    <string name="short_description">Short description</string>
+    <string name="movie_preview">Movie preview</string>
+    <string name="genre">Genre</string>
+    <string name="movie_description_placeholder">Movie description</string>
+    <string name="episodes_guide">Episodes guide</string>
+    <string name="number_episodes">Number episodes</string>
 </resources>
