@@ -25,4 +25,5 @@
     <dimen name="multiplier_4">8dp</dimen>
     <dimen name="multiplier_8">16dp</dimen>
     <dimen name="multiplier_60">120dp</dimen>
+    <dimen name="multiplier_12sp">24sp</dimen>
 </resources>

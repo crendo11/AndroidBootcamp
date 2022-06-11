@@ -30,4 +30,5 @@
     <string name="best_selections">Best Selections</string>
     <string name="movie_thumbnail">Movie thumbnail</string>
     <string name="movie_rating">Movie rating</string>
+    <string name="section_title_holder">Section title</string>
 </resources>

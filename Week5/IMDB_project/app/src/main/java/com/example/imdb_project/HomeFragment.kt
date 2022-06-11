@@ -7,10 +7,12 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.example.imdb_project.views.SectionTitleView
 
 class HomeFragment : Fragment() {
 
     private lateinit var horizontalMovieRecyclerView: RecyclerView
+    private lateinit var sectionTitleView: SectionTitleView
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -33,6 +35,10 @@ class HomeFragment : Fragment() {
         // get list of movies and pass them to adapter
         val moviesList = Movies(view.context).movies
         movieListAdapter.submitList(moviesList)
+
+        // set section title for best selections
+        sectionTitleView = view.findViewById(R.id.bestSelectionsTitle)
+        sectionTitleView.setTitle(getString(R.string.best_selections))
 
         return view
     }

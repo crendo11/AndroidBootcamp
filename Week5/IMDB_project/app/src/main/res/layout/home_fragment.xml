@@ -79,24 +79,14 @@
         android:layout_marginTop="@dimen/multiplier_10">
 
         <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@color/white"
-            android:paddingStart="@dimen/multiplier_10"
-            android:paddingBottom="@dimen/multiplier_10"
-            android:orientation="vertical"
-            tools:ignore="RtlSymmetry">
+            tools:ignore="RtlSymmetry"
+            style="@style/imdb_section">
 
-            <TextView
-                android:layout_width="wrap_content"
+            <com.example.imdb_project.views.SectionTitleView
+                android:id="@+id/bestSelectionsTitle"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:paddingStart="@dimen/multiplier_10"
-                android:layout_marginTop="@dimen/multiplier_10"
-                android:textSize="@dimen/multiplier_10sp"
-                android:textColor="@color/black"
-                android:text="@string/best_selections"
-                android:background="@drawable/title_text_border"
-                android:fontFamily="@font/seconda_round_bold" />
+                android:orientation="horizontal"/>
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/homeRecyclerView"

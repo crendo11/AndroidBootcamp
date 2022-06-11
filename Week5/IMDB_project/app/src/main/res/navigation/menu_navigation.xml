@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/menu_navigation"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.imdb_project.HomeFragment"
+        tools:layout="@layout/home_fragment"
+        android:label="null">
+        <action
+            android:id="@+id/action_homeFragment_to_searchFragment"
+            app:destination="@id/searchFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_playFragment"
+            app:destination="@id/playFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_profileFragment"
+            app:destination="@id/profileFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_movieDetailsFragment"
+            app:destination="@id/movieDetailsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/searchFragment"
+        android:name="com.example.imdb_project.SearchFragment"
+        tools:layout="@layout/search_fragment"
+        android:label="null">
+        <action
+            android:id="@+id/action_searchFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+        <action
+            android:id="@+id/action_searchFragment_to_profileFragment"
+            app:destination="@id/profileFragment" />
+        <action
+            android:id="@+id/action_searchFragment_to_playFragment"
+            app:destination="@id/playFragment" />
+        <action
+            android:id="@+id/action_searchFragment_to_movieDetailsFragment"
+            app:destination="@id/movieDetailsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/playFragment"
+        android:name="com.example.imdb_project.PlayFragment"
+        tools:layout="@layout/play_fragment"
+        android:label="null">
+        <action
+            android:id="@+id/action_playFragment_to_searchFragment"
+            app:destination="@id/searchFragment" />
+        <action
+            android:id="@+id/action_playFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+        <action
+            android:id="@+id/action_playFragment_to_profileFragment"
+            app:destination="@id/profileFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.example.imdb_project.ProfileFragment"
+        tools:layout="@layout/profile_fragment"
+        android:label="null">
+        <action
+            android:id="@+id/action_profileFragment_to_playFragment"
+            app:destination="@id/playFragment" />
+        <action
+            android:id="@+id/action_profileFragment_to_searchFragment"
+            app:destination="@id/searchFragment" />
+        <action
+            android:id="@+id/action_profileFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/movieDetailsFragment"
+        android:name="com.example.imdb_project.MovieDetailsFragment"
+        tools:layout="@layout/movie_details_fragment"
+        android:label="null">
+        <argument
+            android:name="title"
+            app:argType="string"/>
+        <argument
+            android:name="originalTitle"
+            app:argType="string"/>
+        <argument
+            android:name="description"
+            app:argType="string"/>
+        <argument
+            android:name="preview"
+            app:argType="integer"/>
+        <argument
+            android:name="thumbnail"
+            app:argType="integer"/>
+        <argument
+            android:name="shortDescription"
+            app:argType="string"
+            />
+        <argument
+            android:name="numberEpisodes"
+            app:argType="integer"/>
+        <action
+            android:id="@+id/action_movieDetailsFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+        <action
+            android:id="@+id/action_movieDetailsFragment_to_searchFragment"
+            app:destination="@id/searchFragment" />
+    </fragment>
+</navigation>
