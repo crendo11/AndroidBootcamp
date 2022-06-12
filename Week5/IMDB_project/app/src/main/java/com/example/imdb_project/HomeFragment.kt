@@ -5,6 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.imdb_project.views.SectionTitleView
@@ -29,7 +30,7 @@ class HomeFragment : Fragment() {
             LinearLayoutManager(view.context, LinearLayoutManager.HORIZONTAL, false)
 
         // instantiate the adapter and pass it to the recycler
-        val movieListAdapter = HorizontalMovieListAdapter()
+        val movieListAdapter = HorizontalMovieListAdapter(::navigateToMovieDetails)
         horizontalMovieRecyclerView.adapter = movieListAdapter
 
         // get list of movies and pass them to adapter
@@ -41,5 +42,14 @@ class HomeFragment : Fragment() {
         sectionTitleView.setTitle(getString(R.string.best_selections))
 
         return view
+    }
+
+    private fun navigateToMovieDetails(movie: Movie){
+        val action = HomeFragmentDirections.actionHomeFragmentToMovieDetailsFragment(
+            title = movie.title, originalTitle = movie.title, description = movie.description,
+            preview = movie.preview, thumbnail = movie.thumbnail, shortDescription = "short description",
+            numberEpisodes = movie.numberOfEpisodes, stars = movie.rating
+        )
+        findNavController().navigate(action)
     }
 }

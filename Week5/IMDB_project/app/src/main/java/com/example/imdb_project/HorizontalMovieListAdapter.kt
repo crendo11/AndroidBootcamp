@@ -5,7 +5,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 
-class HorizontalMovieListAdapter :
+class HorizontalMovieListAdapter(private val clickHandler: (Movie) -> Unit) :
     ListAdapter<Movie, HorizontalMovieViewHolder>(HorizontalMovieDiffCallBack()) {
     private class HorizontalMovieDiffCallBack : DiffUtil.ItemCallback<Movie>() {
         override fun areItemsTheSame(oldItem: Movie, newItem: Movie): Boolean =
@@ -24,5 +24,8 @@ class HorizontalMovieListAdapter :
     override fun onBindViewHolder(holder: HorizontalMovieViewHolder, position: Int) {
         val movie = getItem(position)
         holder.bind(movie)
+        holder.itemView.setOnClickListener{
+            clickHandler(movie)
+        }
     }
 }

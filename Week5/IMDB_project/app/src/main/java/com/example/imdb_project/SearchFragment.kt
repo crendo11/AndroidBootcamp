@@ -5,6 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 
@@ -26,7 +27,7 @@ class SearchFragment: Fragment() {
         movieRecyclerView.layoutManager = LinearLayoutManager(view.context)
 
         // instantiate the adapter and pass it to the recycler
-        val movieListAdapter = MovieListAdapter()
+        val movieListAdapter = MovieListAdapter(::navigateToMovieDetails)
         movieRecyclerView.adapter = movieListAdapter
 
         // get list of movies and pass them to adapter
@@ -34,5 +35,14 @@ class SearchFragment: Fragment() {
         movieListAdapter.submitList(moviesList)
 
         return view
+    }
+
+    private fun navigateToMovieDetails(movie: Movie){
+        val action = SearchFragmentDirections.actionSearchFragmentToMovieDetailsFragment(
+            title = movie.title, originalTitle = movie.title, description = movie.description,
+            preview = movie.preview, thumbnail = movie.thumbnail, shortDescription = "short description",
+            numberEpisodes = movie.numberOfEpisodes, stars = movie.rating
+        )
+        findNavController().navigate(action)
     }
 }

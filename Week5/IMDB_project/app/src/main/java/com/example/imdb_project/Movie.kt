@@ -6,5 +6,7 @@ data class Movie (
     val actors: List<String>,
     val year: Int,
     val rating: Float,
-    val thumbnail: Int
+    val thumbnail: Int,
+    val preview: Int,
+    val numberOfEpisodes: Int
 )

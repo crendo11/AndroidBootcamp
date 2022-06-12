@@ -32,4 +32,5 @@
     <dimen name="multiplier_80">160dp</dimen>
     <dimen name="multiplier_120">240dp</dimen>
     <dimen name="multiplier_70">140dp</dimen>
+    <dimen name="multiplier_165">230dp</dimen>
 </resources>

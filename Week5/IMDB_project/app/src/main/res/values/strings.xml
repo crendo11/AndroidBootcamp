@@ -16,9 +16,7 @@
     <string name="movie_image_res_description">Movie Image</string>
     <string name="actors_placeholder">Actors</string>
     <string name="title_httyd">How to train your dragon</string>
-    <string name="description_httyd">brief movie description</string>
     <string name="queen_south_title">Queen of the South</string>
-    <string name="description_queen_south">Description of Queen of the south</string>
     <string name="home">Home</string>
     <string name="search">Search</string>
     <string name="play" translatable="false">Play</string>
@@ -42,4 +40,21 @@
     <string name="movie_description_placeholder">Movie description</string>
     <string name="episodes_guide">Episodes guide</string>
     <string name="number_episodes">Number episodes</string>
+    <string name="add_to_my_wish_list">Add to my wish list</string>
+    <string name="queenpins_synopsis">Two housewives organize a scam that steals millions of
+        dollars from big companies through discount coupons. A policeman and a postal inspector
+        will try to stop the daring scammers.</string>
+    <string name="queen_sugar_synopsis">The Bordelon brothers must put aside their complicated
+        lives in order to unite and manage the clan\'s sugarcane farm.</string>
+    <string name="queens_gambit_synopsis">Orphan and chess prodigy, Beth Harmon, struggles with
+        addiction as she seeks to become the world\'s best chess player</string>
+    <string name="queen_south_synopsis">Teresa Mendoza, a woman from a poor neighborhood,
+        falls in love with a drug lord in Jalisco. When he is murdered, she is forced to go to
+        the United States, where she becomes a wealthy drug trafficker in search of revenge,
+        always on the run from death.</string>
+    <string name="httyd_synopsis">Hiccup, a teenage Viking, begins dragon training classes, and
+        finally sees an opportunity to prove he is capable of becoming a warrior when he befriends
+        a wounded dragon.</string>
+    <string name="episode">episode</string>
+    <string name="episodes">episodes</string>
 </resources>
