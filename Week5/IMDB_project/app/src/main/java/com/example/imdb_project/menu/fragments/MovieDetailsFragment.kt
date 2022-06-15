@@ -1,4 +1,4 @@
-package com.example.imdb_project
+package com.example.imdb_project.menu.fragments
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -8,6 +8,7 @@ import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
 import androidx.navigation.ui.setupWithNavController
+import com.example.imdb_project.R
 import com.example.imdb_project.databinding.MovieDetailsFragmentBinding
 
 class MovieDetailsFragment : Fragment() {

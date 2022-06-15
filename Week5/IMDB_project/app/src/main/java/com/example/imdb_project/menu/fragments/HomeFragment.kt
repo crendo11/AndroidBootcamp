@@ -1,4 +1,4 @@
-package com.example.imdb_project
+package com.example.imdb_project.menu.fragments
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -8,6 +8,10 @@ import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.example.imdb_project.HorizontalMovieListAdapter
+import com.example.imdb_project.Movie
+import com.example.imdb_project.Movies
+import com.example.imdb_project.R
 import com.example.imdb_project.views.SectionTitleView
 
 class HomeFragment : Fragment() {
