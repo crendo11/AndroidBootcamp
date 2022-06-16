@@ -85,7 +85,7 @@
             android:paddingBottom="@dimen/multiplier_10"
             android:paddingStart="@dimen/multiplier_10">
 
-            <com.example.imdb_project.views.SectionTitleView
+            <com.example.imdb_project.ui.presentation.customviews.SectionTitleView
                 android:id="@+id/bestSelectionsTitle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />

@@ -1,4 +1,4 @@
-package com.example.imdb_project.ui
+package com.example.imdb_project.ui.presentation
 
 import android.content.Intent
 import kotlin.concurrent.schedule

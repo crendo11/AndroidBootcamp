@@ -1,10 +1,10 @@
-package com.example.imdb_project.ui
+package com.example.imdb_project.ui.presentation
 
 import android.view.View
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-import com.example.imdb_project.Movie
+import com.example.imdb_project.domain.models.MovieModel
 import com.example.imdb_project.R
 
 class MovieViewHolder(viewItem: View): RecyclerView.ViewHolder(viewItem) {
@@ -13,10 +13,10 @@ class MovieViewHolder(viewItem: View): RecyclerView.ViewHolder(viewItem) {
     private val actors = viewItem.findViewById<TextView>(R.id.movieActors)
     private val movieYear = viewItem.findViewById<TextView>(R.id.movieYear)
 
-    fun bind(movie: Movie){
-        title.text = movie.title
-        actors.text = movie.actors.joinToString()
-        movieYear.text = movie.year.toString()
-        thumbnail.setImageResource(movie.thumbnail)
+    fun bind(movieModel: MovieModel){
+        title.text = movieModel.title
+        actors.text = movieModel.actors.joinToString()
+        movieYear.text = movieModel.year.toString()
+        thumbnail.setImageResource(movieModel.thumbnail)
     }
 }

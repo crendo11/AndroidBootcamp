@@ -1,10 +1,11 @@
 package com.example.imdb_project
 
 import android.content.Context
+import com.example.imdb_project.domain.models.MovieModel
 
 data class Movies(val context: Context) {
-    val movies: List<Movie> = listOf(
-        Movie(
+    val movieModels: List<MovieModel> = listOf(
+        MovieModel(
             title = context.getString(R.string.title_httyd),
             year = 2010,
             actors = listOf("Jay Baruchel", "America Ferrera"),
@@ -14,7 +15,7 @@ data class Movies(val context: Context) {
             numberOfEpisodes = 1,
             preview = R.drawable.httyd_preview
         ),
-        Movie(
+        MovieModel(
             title = context.getString(R.string.queen_south_title),
             year = 2016,
             actors = listOf("Alice Braga", "Hemky Madera"),
@@ -24,7 +25,7 @@ data class Movies(val context: Context) {
             numberOfEpisodes = 3,
             preview = R.drawable.queen_south_preview
         ),
-        Movie(
+        MovieModel(
             title = "The Queens Gambit",
             year = 2020,
             actors = listOf("Anya Taylor-Joy", "Thomas Brodie"),
@@ -34,7 +35,7 @@ data class Movies(val context: Context) {
             numberOfEpisodes = 7,
             preview = R.drawable.queens_gambit_preview
         ),
-        Movie(
+        MovieModel(
             title = "Queen Sugar",
             year = 2016,
             actors = listOf("Rutina Wesley", "Dawn-Lyen Gardner"),
@@ -44,7 +45,7 @@ data class Movies(val context: Context) {
             numberOfEpisodes = 8,
             preview = R.drawable.queen_sugar_preview
         ),
-        Movie(
+        MovieModel(
             title = "Queenpins",
             year = 2021,
             actors = listOf("Kirsten Bell", "Kirby Howell-Baptiste"),

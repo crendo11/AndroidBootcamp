@@ -14,7 +14,7 @@
         android:theme="@style/Theme.IMDB_project"
         tools:targetApi="31">
         <activity
-            android:name=".SplashActivity"
+            android:name=".ui.presentation.SplashActivity"
             android:exported="true"
             android:noHistory="true">
             <intent-filter>
@@ -28,7 +28,7 @@
             android:exported="true">
         </activity>
         <activity
-            android:name=".HomeActivity"
+            android:name=".ui.presentation.HomeActivity"
             android:exported="true">
         </activity>
 

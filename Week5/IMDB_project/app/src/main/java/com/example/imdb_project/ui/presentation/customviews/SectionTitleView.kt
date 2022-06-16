@@ -1,4 +1,4 @@
-package com.example.imdb_project.views
+package com.example.imdb_project.ui.presentation.customviews
 
 import android.content.Context
 import android.util.AttributeSet

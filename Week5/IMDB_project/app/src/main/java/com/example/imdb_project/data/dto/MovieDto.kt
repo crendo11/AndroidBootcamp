@@ -1,6 +1,6 @@
-package com.example.imdb_project.domain.models
+package com.example.imdb_project.data.dto
 
-data class MovieModel (
+data class MovieDto (
     val title: String,
     val description: String,
     val actors: List<String>,

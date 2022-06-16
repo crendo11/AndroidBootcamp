@@ -1,4 +1,4 @@
-package com.example.imdb_project.ui
+package com.example.imdb_project.ui.presentation
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
