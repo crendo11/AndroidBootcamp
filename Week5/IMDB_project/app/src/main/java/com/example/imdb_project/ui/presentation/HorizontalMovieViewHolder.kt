@@ -1,9 +1,11 @@
-package com.example.imdb_project
+package com.example.imdb_project.ui
 
 import android.view.View
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.example.imdb_project.Movie
+import com.example.imdb_project.R
 
 class HorizontalMovieViewHolder(viewItem: View): RecyclerView.ViewHolder(viewItem) {
     private val title = viewItem.findViewById<TextView>(R.id.horizontalMovieTitle)
