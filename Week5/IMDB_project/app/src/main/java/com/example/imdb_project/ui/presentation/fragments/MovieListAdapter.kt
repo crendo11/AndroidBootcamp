@@ -1,9 +1,10 @@
-package com.example.imdb_project
+package com.example.imdb_project.ui.presentation.fragments
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
+import com.example.imdb_project.R
 import com.example.imdb_project.domain.models.MovieModel
 import com.example.imdb_project.ui.presentation.MovieViewHolder
 

@@ -24,7 +24,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".LoginActivity"
+            android:name=".ui.presentation.fragments.LoginActivity"
             android:exported="true">
         </activity>
         <activity

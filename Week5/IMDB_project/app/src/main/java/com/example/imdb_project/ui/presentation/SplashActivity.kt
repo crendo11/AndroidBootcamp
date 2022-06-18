@@ -4,7 +4,7 @@ import android.content.Intent
 import kotlin.concurrent.schedule
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import com.example.imdb_project.LoginActivity
+import com.example.imdb_project.ui.presentation.fragments.LoginActivity
 import com.example.imdb_project.R
 import java.util.*
 

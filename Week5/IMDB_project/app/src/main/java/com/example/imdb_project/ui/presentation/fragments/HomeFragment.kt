@@ -9,9 +9,7 @@ import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.example.imdb_project.HorizontalMovieListAdapter
 import com.example.imdb_project.domain.models.MovieModel
-import com.example.imdb_project.Movies
 import com.example.imdb_project.R
 import com.example.imdb_project.ui.presentation.customviews.SectionTitleView
 import com.example.imdb_project.ui.viewmodel.MoviesForUIViewModel

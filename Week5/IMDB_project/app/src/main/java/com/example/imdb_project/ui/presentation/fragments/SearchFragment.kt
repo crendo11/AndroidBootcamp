@@ -10,10 +10,6 @@ import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.imdb_project.domain.models.MovieModel
-import com.example.imdb_project.MovieListAdapter
-import com.example.imdb_project.Movies
-import com.example.imdb_project.R
-import com.example.imdb_project.databinding.MovieDetailsFragmentBinding
 import com.example.imdb_project.databinding.SearchFragmentBinding
 import com.example.imdb_project.ui.viewmodel.MoviesForUIViewModel
 
@@ -29,26 +25,9 @@ class SearchFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-
-        _binding = SearchFragmentBinding.inflate(inflater, container, false)
-        val view = binding.root
-
-        // get the recyclerview from the layout
-        movieRecyclerView = binding.movieList
-
-        // set the layout manager to linear
-        movieRecyclerView.layoutManager = LinearLayoutManager(view.context)
-
-        // instantiate the adapter and pass it to the recycler
-        val movieListAdapter = MovieListAdapter(::navigateToMovieDetails)
-        movieRecyclerView.adapter = movieListAdapter
-
-        viewModel.setView()
-        viewModel.movies.observe(requireActivity()){ moviesList ->
-            movieListAdapter.submitList(moviesList)
-        }
-
-        return view
+        initViewBinding(inflater, container!!)
+        configureRecyclerViews()
+        return binding.root
     }
 
     private fun navigateToMovieDetails(movieModel: MovieModel) {
@@ -63,5 +42,29 @@ class SearchFragment : Fragment() {
             stars = movieModel.rating
         )
         findNavController().navigate(action)
+    }
+
+    private fun initViewBinding(
+        inflater: LayoutInflater,
+        container: ViewGroup,
+    ) {
+        _binding = SearchFragmentBinding.inflate(inflater, container, false)
+    }
+
+    private fun configureRecyclerViews() {
+        // get the recyclerview from the layout
+        movieRecyclerView = binding.movieList
+
+        // set the layout manager to linear
+        movieRecyclerView.layoutManager = LinearLayoutManager(binding.root.context)
+
+        // instantiate the adapter and pass it to the recycler
+        val movieListAdapter = MovieListAdapter(::navigateToMovieDetails)
+        movieRecyclerView.adapter = movieListAdapter
+
+        viewModel.setView()
+        viewModel.movies.observe(requireActivity()) { moviesList ->
+            movieListAdapter.submitList(moviesList)
+        }
     }
 }
