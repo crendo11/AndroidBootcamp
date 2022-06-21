@@ -1,23 +1,26 @@
-package com.example.imdb_project.menu.fragments
+package com.example.imdb_project.ui.presentation.fragments
 
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.example.imdb_project.HorizontalMovieListAdapter
-import com.example.imdb_project.Movie
-import com.example.imdb_project.Movies
+import com.example.imdb_project.domain.models.MovieModel
 import com.example.imdb_project.R
-import com.example.imdb_project.views.SectionTitleView
+import com.example.imdb_project.ui.presentation.customviews.SectionTitleView
+import com.example.imdb_project.ui.viewmodel.MoviesForUIViewModel
 
 class HomeFragment : Fragment() {
 
     private lateinit var horizontalMovieRecyclerView: RecyclerView
     private lateinit var sectionTitleView: SectionTitleView
+
+    // Bring viewModel
+    private val viewModel by viewModels<MoviesForUIViewModel>()
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -25,7 +28,6 @@ class HomeFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         val view = inflater.inflate(R.layout.home_fragment, container, false)
-
         // get the recyclerview from the layout
         horizontalMovieRecyclerView = view.findViewById(R.id.homeRecyclerView)
 
@@ -33,13 +35,14 @@ class HomeFragment : Fragment() {
         horizontalMovieRecyclerView.layoutManager =
             LinearLayoutManager(view.context, LinearLayoutManager.HORIZONTAL, false)
 
-        // instantiate the adapter and pass it to the recycler
         val movieListAdapter = HorizontalMovieListAdapter(::navigateToMovieDetails)
         horizontalMovieRecyclerView.adapter = movieListAdapter
 
-        // get list of movies and pass them to adapter
-        val moviesList = Movies(view.context).movies
-        movieListAdapter.submitList(moviesList)
+        viewModel.setView()
+        // listen to LiveData of movies
+        viewModel.movies.observe(requireActivity()) { moviesList ->
+            movieListAdapter.submitList(moviesList)
+        }
 
         // set section title for best selections
         sectionTitleView = view.findViewById(R.id.bestSelectionsTitle)
@@ -48,11 +51,16 @@ class HomeFragment : Fragment() {
         return view
     }
 
-    private fun navigateToMovieDetails(movie: Movie){
+    private fun navigateToMovieDetails(movieModel: MovieModel) {
         val action = HomeFragmentDirections.actionHomeFragmentToMovieDetailsFragment(
-            title = movie.title, originalTitle = movie.title, description = movie.description,
-            preview = movie.preview, thumbnail = movie.thumbnail, shortDescription = "short description",
-            numberEpisodes = movie.numberOfEpisodes, stars = movie.rating
+            title = movieModel.title,
+            originalTitle = movieModel.title,
+            description = movieModel.description,
+            preview = movieModel.preview,
+            thumbnail = movieModel.thumbnail,
+            shortDescription = "short description",
+            numberEpisodes = movieModel.numberOfEpisodes,
+            stars = movieModel.rating
         )
         findNavController().navigate(action)
     }

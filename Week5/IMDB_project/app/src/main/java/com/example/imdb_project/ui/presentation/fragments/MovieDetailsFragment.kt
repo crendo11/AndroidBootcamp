@@ -1,4 +1,4 @@
-package com.example.imdb_project.menu.fragments
+package com.example.imdb_project.ui.presentation.fragments
 
 import android.os.Bundle
 import android.view.LayoutInflater
