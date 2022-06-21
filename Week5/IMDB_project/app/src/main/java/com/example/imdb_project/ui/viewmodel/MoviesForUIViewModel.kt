@@ -3,10 +3,12 @@ package com.example.imdb_project.ui.viewmodel
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
+import androidx.lifecycle.viewModelScope
 import com.example.imdb_project.data.datasources.MoviesDataSourceImpl
 import com.example.imdb_project.data.repositories.MoviesRepositoryImpl
 import com.example.imdb_project.domain.models.MovieModel
 import com.example.imdb_project.domain.usecases.GetMoviesForUIUseCaseImpl
+import kotlinx.coroutines.launch
 
 class MoviesForUIViewModel: ViewModel() {
     // this should not be done like this. This is a temporal solution
@@ -17,7 +19,13 @@ class MoviesForUIViewModel: ViewModel() {
     val movies: LiveData<List<MovieModel>> = _movies
 
     fun setView(){
-        _movies.value = useCase.getMovies()
+        viewModelScope.launch {
+            try {
+                _movies.value = useCase.getMovies()
+            } catch (e: Exception) {
+                _movies.value = listOf()
+            }
+        }
     }
 
 

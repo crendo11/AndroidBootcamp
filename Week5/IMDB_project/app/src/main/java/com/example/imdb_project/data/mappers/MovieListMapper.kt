@@ -1,25 +1,34 @@
 package com.example.imdb_project.data.mappers
 
+import android.net.Uri
+import androidx.core.net.toUri
 import com.example.imdb_project.data.dto.MovieDto
+import com.example.imdb_project.data.dto.MovieListResponse
 import com.example.imdb_project.domain.models.MovieModel
 
 class MovieListMapper {
-    fun mapMovieDtoList2MovieModelList(movieList: List<MovieDto>): List<MovieModel> {
+    fun mapMovieDtoList2MovieModelList(movieList: MovieListResponse): List<MovieModel> {
         val movies = mutableListOf<MovieModel>()
-        movieList.forEach { movieDto ->
+        movieList.items.forEach { movieDto ->
             movies.add(
                 MovieModel(
                     title = movieDto.title,
-                    description = movieDto.description,
-                    thumbnail = movieDto.thumbnail,
-                    preview = movieDto.preview,
-                    actors = movieDto.actors,
+                    overview = movieDto.overview,
+                    thumbnail = imageUrl2imageUri(movieDto.thumbnail),
+                    preview = imageUrl2imageUri(movieDto.preview),
+                    actors = listOf(),
                     rating = movieDto.rating,
-                    numberOfEpisodes = movieDto.numberOfEpisodes,
-                    year = movieDto.year
+                    numberOfEpisodes = 1,
+                    releaseDate = movieDto.releaseDate
                 )
             )
         }
         return movies
+    }
+
+    private fun imageUrl2imageUri(imagePath: String): Uri {
+        val baseUrl = "https://image.tmdb.org/t/p/w500"
+        val imageUrl = baseUrl+imagePath
+        return imageUrl.toUri().buildUpon().scheme("https").build()
     }
 }

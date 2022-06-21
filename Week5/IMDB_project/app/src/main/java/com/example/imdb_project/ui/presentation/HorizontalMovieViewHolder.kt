@@ -4,6 +4,7 @@ import android.view.View
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import coil.load
 import com.example.imdb_project.domain.models.MovieModel
 import com.example.imdb_project.R
 
@@ -15,6 +16,9 @@ class HorizontalMovieViewHolder(viewItem: View): RecyclerView.ViewHolder(viewIte
     fun bind(movieModel: MovieModel){
         title.text = movieModel.title
         movieRating.text = movieModel.rating.toString()
-        thumbnail.setImageResource(movieModel.thumbnail)
+        thumbnail.load(movieModel.thumbnail){
+            placeholder(R.drawable.loading_animation)
+            error(R.drawable.ic_baseline_error_24)
+        }
     }
 }

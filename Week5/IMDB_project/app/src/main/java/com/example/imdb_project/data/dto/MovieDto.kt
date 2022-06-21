@@ -1,12 +1,14 @@
 package com.example.imdb_project.data.dto
 
+import com.squareup.moshi.Json
+
 data class MovieDto (
     val title: String,
-    val description: String,
-    val actors: List<String>,
-    val year: Int,
-    val rating: Float,
-    val thumbnail: Int,
-    val preview: Int,
-    val numberOfEpisodes: Int
+    val overview: String,
+    //val actors: List<String>,
+    @Json(name = "release_date") val releaseDate: String,
+    @Json(name = "vote_average") val rating: Float,
+    @Json(name = "poster_path") val thumbnail: String,
+    @Json(name = "backdrop_path") val preview: String,
+    //val numberOfEpisodes: Int
 )

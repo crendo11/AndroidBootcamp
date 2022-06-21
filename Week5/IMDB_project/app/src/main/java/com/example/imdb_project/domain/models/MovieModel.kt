@@ -1,12 +1,14 @@
 package com.example.imdb_project.domain.models
 
+import android.net.Uri
+
 data class MovieModel (
     val title: String,
-    val description: String,
+    val overview: String,
     val actors: List<String>,
-    val year: Int,
+    val releaseDate: String,
     val rating: Float,
-    val thumbnail: Int,
-    val preview: Int,
+    val thumbnail: Uri,
+    val preview: Uri,
     val numberOfEpisodes: Int
 )

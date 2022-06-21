@@ -1,7 +1,8 @@
 package com.example.imdb_project.data.datasources
 
 import com.example.imdb_project.data.dto.MovieDto
+import com.example.imdb_project.data.dto.MovieListResponse
 
 interface MoviesDataSource {
-    fun getMovies(): List<MovieDto>
+    suspend fun getMovies(): MovieListResponse
 }

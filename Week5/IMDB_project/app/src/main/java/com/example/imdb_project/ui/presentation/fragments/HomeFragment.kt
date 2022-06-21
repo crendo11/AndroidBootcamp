@@ -55,9 +55,9 @@ class HomeFragment : Fragment() {
         val action = HomeFragmentDirections.actionHomeFragmentToMovieDetailsFragment(
             title = movieModel.title,
             originalTitle = movieModel.title,
-            description = movieModel.description,
-            preview = movieModel.preview,
-            thumbnail = movieModel.thumbnail,
+            description = movieModel.overview,
+            preview = movieModel.preview.toString(),
+            thumbnail = movieModel.thumbnail.toString(),
             shortDescription = "short description",
             numberEpisodes = movieModel.numberOfEpisodes,
             stars = movieModel.rating
