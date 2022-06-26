@@ -12,4 +12,12 @@ class MoviesRepositoryImpl(private val dataSource: MoviesDataSource): MoviesRepo
         val mapper = MovieListMapper()
         return mapper.mapMovieDtoList2MovieModelList(dto)
     }
+
+    override suspend fun getRatedMovies(): List<MovieModel> {
+        val dto = dataSource.getRatedMovies()
+        val mapper = MovieListMapper()
+        return mapper.mapMovieRatedList2MovieModelList(dto)
+    }
+
+
 }

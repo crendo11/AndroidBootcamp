@@ -38,9 +38,9 @@ class HomeFragment : Fragment() {
         val movieListAdapter = HorizontalMovieListAdapter(::navigateToMovieDetails)
         horizontalMovieRecyclerView.adapter = movieListAdapter
 
-        viewModel.setView()
+        viewModel.getTopRatedMovies()
         // listen to LiveData of movies
-        viewModel.movies.observe(requireActivity()) { moviesList ->
+        viewModel.ratedMovies.observe(requireActivity()) { moviesList ->
             movieListAdapter.submitList(moviesList)
         }
 

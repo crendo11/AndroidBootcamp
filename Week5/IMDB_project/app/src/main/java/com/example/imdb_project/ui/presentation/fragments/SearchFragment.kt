@@ -62,7 +62,7 @@ class SearchFragment : Fragment() {
         val movieListAdapter = MovieListAdapter(::navigateToMovieDetails)
         movieRecyclerView.adapter = movieListAdapter
 
-        viewModel.setView()
+        viewModel.getMoviesList()
         viewModel.movies.observe(requireActivity()) { moviesList ->
             movieListAdapter.submitList(moviesList)
         }

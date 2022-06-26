@@ -2,6 +2,7 @@ package com.example.imdb_project.data.services
 
 import com.example.imdb_project.data.dto.MovieListResponse
 import com.example.imdb_project.data.dto.MovieDto
+import com.example.imdb_project.data.dto.MovieRatedResponse
 import com.squareup.moshi.Moshi
 import com.squareup.moshi.kotlin.reflect.KotlinJsonAdapterFactory
 import retrofit2.Retrofit
@@ -24,7 +25,7 @@ private val retrofit = Retrofit.Builder()
 
 interface ImdbApiService{
     @GET("movie/top_rated?api_key=${API_KEY}")
-    suspend fun getTopRated(): List<MovieDto>
+    suspend fun getTopRated(): MovieRatedResponse
 
     @GET("list/1?api_key=${API_KEY}")
     suspend fun getMoviesList(): MovieListResponse

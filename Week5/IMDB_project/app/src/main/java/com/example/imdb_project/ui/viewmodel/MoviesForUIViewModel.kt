@@ -17,13 +17,25 @@ class MoviesForUIViewModel: ViewModel() {
     // create live data
     private val _movies = MutableLiveData<List<MovieModel>>()
     val movies: LiveData<List<MovieModel>> = _movies
+    private val _ratedMovies = MutableLiveData<List<MovieModel>>()
+    val ratedMovies: LiveData<List<MovieModel>> = _ratedMovies
 
-    fun setView(){
+    fun getMoviesList(){
         viewModelScope.launch {
             try {
                 _movies.value = useCase.getMovies()
             } catch (e: Exception) {
                 _movies.value = listOf()
+            }
+        }
+    }
+
+    fun getTopRatedMovies(){
+        viewModelScope.launch {
+            try{
+                _ratedMovies.value = useCase.getRatedMovies()
+            } catch (e: Exception) {
+                _ratedMovies.value = listOf()
             }
         }
     }

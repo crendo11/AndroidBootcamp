@@ -8,7 +8,7 @@ data class MovieModel (
     val actors: List<String>,
     val releaseDate: String,
     val rating: Float,
-    val thumbnail: Uri,
-    val preview: Uri,
+    val thumbnail: String,
+    val preview: String,
     val numberOfEpisodes: Int
 )

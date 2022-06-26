@@ -7,4 +7,8 @@ class GetMoviesForUIUseCaseImpl(private val repository: MoviesRepository): GetMo
     override suspend fun getMovies(): List<MovieModel> {
         return repository.getMovies()
     }
+
+    override suspend fun getRatedMovies(): List<MovieModel> {
+        return repository.getRatedMovies()
+    }
 }
