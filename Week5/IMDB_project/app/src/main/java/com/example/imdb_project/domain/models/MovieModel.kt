@@ -1,7 +1,5 @@
 package com.example.imdb_project.domain.models
 
-import android.net.Uri
-
 data class MovieModel (
     val title: String,
     val overview: String,
