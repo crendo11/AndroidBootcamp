@@ -29,11 +29,11 @@
                 android:text="@string/username" />
 
             <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/usernameInput"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
                 <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/usernameInput"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:background="@drawable/rounded_corner_view"
@@ -50,11 +50,11 @@
 
 
             <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/password_input"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
                 <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/password_input"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:background="@drawable/rounded_corner_view"
@@ -72,7 +72,7 @@
                 android:layout_marginBottom="@dimen/multiplier_5"/>
 
             <Button
-                android:id="@+id/login_button"
+                android:id="@+id/loginButton"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:backgroundTint="@color/disabled_button_color"

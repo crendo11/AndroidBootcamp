@@ -1,12 +1,14 @@
-package com.example.imdb_project.data.database
+package com.example.imdb_project.datalayer.databases
 
 import android.content.Context
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
+import com.example.imdb_project.data.database.UserDao
+import com.example.imdb_project.data.database.UserEntity
 
 @Database(entities = [UserEntity::class], version = 1)
-abstract class UserDatabase: RoomDatabase() {
+abstract class UserDatabase : RoomDatabase() {
 
     abstract fun userDao(): UserDao
 

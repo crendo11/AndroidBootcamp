@@ -59,5 +59,14 @@
     <string name="email">Correo elecotrónico</string>
     <string name="the_password_must_contain_8_characters">La contraseña debe contener 8 caracteres</string>
     <string name="accept">Aceptar</string>
+    <string name="can_sign_in">Ya puedes iniciar sesión</string>
+    <string name="empty_name">Nombre vacío</string>
+    <string name="empty_email">Email vacío</string>
+    <string name="empty_password">Contraseña vacía</string>
+    <string name="password_length_error">La contraseña debe terni mínimo 8 caracteres</string>
+    <string name="invalid_email">Email inválido</string>
+    <string name="user_exists_error">El usuario ya existe</string>
+    <string name="error_occurred">Ha ocurrido un error</string>
+    <string name="error_login">Email o conrtaseña incorrecta</string>
 
 </resources>

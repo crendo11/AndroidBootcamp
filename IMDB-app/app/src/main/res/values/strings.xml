@@ -62,4 +62,13 @@
     <string name="email">Email</string>
     <string name="the_password_must_contain_8_characters">The password must contain 8 characters</string>
     <string name="accept">Accept</string>
+    <string name="can_sign_in">You can sign in now</string>
+    <string name="empty_name">Empty name</string>
+    <string name="empty_email">Empty email</string>
+    <string name="empty_password">Empty password</string>
+    <string name="password_length_error">Password must have minimum 8 characters</string>
+    <string name="invalid_email">Invalid email</string>
+    <string name="user_exists_error">User already exists</string>
+    <string name="error_occurred">An error occurred</string>
+    <string name="error_login">Incorrect email or password</string>
 </resources>

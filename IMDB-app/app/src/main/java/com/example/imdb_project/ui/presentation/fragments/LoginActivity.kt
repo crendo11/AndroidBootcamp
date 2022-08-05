@@ -2,29 +2,33 @@ package com.example.imdb_project.ui.presentation.fragments
 
 import android.content.Intent
 import android.os.Bundle
-import android.widget.Button
-import android.widget.TextView
+import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
+import com.example.imdb_project.App
 import com.example.imdb_project.R
+import com.example.imdb_project.databinding.LoginActivityBinding
 import com.example.imdb_project.ui.presentation.HomeActivity
+import com.example.imdb_project.ui.viewmodel.UsersForUIViewModel
 
 class LoginActivity : AppCompatActivity(){
 
-    private lateinit var loginButton: Button
-    private lateinit var registerTextView: TextView
+    private var _binding: LoginActivityBinding? = null
+
+    // This property is only valid between onCreateView and
+    // onDestroyView.
+    private val binding get() = _binding!!
+    private val viewModel by viewModels<UsersForUIViewModel>()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.login_activity)
 
-        loginButton = findViewById(R.id.login_button)
-        loginButton.isEnabled = true
+        _binding = LoginActivityBinding.inflate(layoutInflater)
+        val view = binding.root
+        setContentView(view)
 
-        // go to home activity
-        loginButton.setOnClickListener{ goToHome() }
-
-        registerTextView = findViewById(R.id.registerTextView)
-        registerTextView.setOnClickListener{ goToRegister() }
+        subscribeToLoginLiveData()
+        setUpLoginButton()
+        setupRegisterButton()
     }
 
     private fun goToHome(){
@@ -38,5 +42,30 @@ class LoginActivity : AppCompatActivity(){
         startActivity(intent)
     }
 
+    private fun setUpLoginButton(){
+        val loginButton = binding.loginButton
+        loginButton.isEnabled = true
+        loginButton.setOnClickListener{
+            viewModel.login(
+                email = binding.usernameInput.text.toString(),
+                password = binding.passwordInput.text.toString()
+            )
+        }
+    }
+
+    private fun subscribeToLoginLiveData(){
+        viewModel.loginStatus.observe(this){ loginStatus ->
+            if (loginStatus){
+                goToHome()
+            }
+        }
+    }
+
+    private fun setupRegisterButton(){
+        val registerButton = binding.registerTextView
+        registerButton.setOnClickListener{
+            goToRegister()
+        }
+    }
 
 }
