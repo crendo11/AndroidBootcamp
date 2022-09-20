@@ -57,4 +57,9 @@
         a wounded dragon.</string>
     <string name="episode">episode</string>
     <string name="episodes">episodes</string>
+    <string name="name">Name</string>
+    <string name="create_an_account">Create an account</string>
+    <string name="email">Email</string>
+    <string name="the_password_must_contain_8_characters">The password must contain 8 characters</string>
+    <string name="accept">Accept</string>
 </resources>

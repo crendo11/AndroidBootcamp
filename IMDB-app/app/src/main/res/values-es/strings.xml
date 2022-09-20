@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">IMDb</string>
+    <string name="username">Usuario</string>
+    <string name="password">Contraseña</string>
+    <string name="forgot_password">¿Olvidaste la contraseña?</string>
+    <string name="or_you_can_sign_in_with">O podes ingresar con</string>
+    <string name="login_with_apple">Inicia sesión con Apple</string>
+    <string name="continue_as_guest">Continuar como invitado</string>
+    <string name="dont_have_an_account">¿No tienes cuenta?</string>
+    <string name="register">Register</string>
+    <string name="search_hint">Buscar IMDb</string>
+    <string name="movie_title_holder">Título</string>
+    <string name="movie_year_placeholder">Año</string>
+    <string name="movie_image_res_description">Imagen de la Película</string>
+    <string name="actors_placeholder">Actores</string>
+    <string name="title_httyd">How to train your dragon</string>
+    <string name="queen_south_title">Queen of the South</string>
+    <string name="home">Inicio</string>
+    <string name="search">Buscar</string>
+    <string name="stranger_things_movie_trailer">trailer de Stranger Things</string>
+    <string name="official_trailer">Trailer Oficial</string>
+    <string name="thumbnail_stranger_things">Portada Stranger Things</string>
+    <string name="play_button">Botón para reproducir</string>
+    <string name="best_selections">Las mejores selecciones</string>
+    <string name="movie_thumbnail">Miniatura de la película</string>
+    <string name="movie_rating">Movie rating</string>
+    <string name="section_title_holder">Section title</string>
+    <string name="info_button">Botón de información</string>
+    <string name="bookmark_movie">Guardar película</string>
+    <string name="number_of_stars">Puntuación</string>
+    <string name="toolbar_title_placeholder">Título</string>
+    <string name="original_title">Título original</string>
+    <string name="short_description">Descripción corta</string>
+    <string name="movie_preview">Imagen de la película</string>
+    <string name="genre">-Género</string>
+    <string name="movie_description_placeholder">Sinópsis de la película</string>
+    <string name="episodes_guide">Guía de episodios</string>
+    <string name="number_episodes">Número de episodios</string>
+    <string name="add_to_my_wish_list">Agregar a mi lista de seguimiento</string>
+    <string name="queenpins_synopsis">Dos amas de casa organizan una estafa que roba millones de
+        dólares a las grandes companías a través de los cupones de descuento. Un policía y un
+        inspector postal tratarán de detener a las osadas timadoras.</string>
+    <string name="queen_sugar_synopsis">Los hermanos Bordelon deben dejar a un lado sus
+        complicadas vidas para poder unirse y administrar la granja de caña de azúcar
+        del clan.</string>
+    <string name="queens_gambit_synopsis">La huérfana y prodigio del ajedrez, Beth Harmon, lucha contra la adicción mientras busca convertirse en la mejor jugadora de ajedrez del mundo</string>
+    <string name="queen_south_synopsis">Teresa Mendoza, una mujer de un barrio pobre, se enamora
+        de un capo en Jalisco. Cuando lo asesinan se ve forzada a irse a Estados Unidos, en
+        donde se convierte en una rica narcotraficante en busca de venganza que huye siempre
+        de la muerte.</string>
+    <string name="httyd_synopsis">Hipo, un vikingo adolescente, comienza las clases de entrenamiento
+        con dragones, y ve por fin una oportunidad para demostrar que es capaz de convertirse en
+        guerrero, cuando hace amistad con un dragón herido.</string>
+    <string name="episode">episodio</string>
+    <string name="episodes">episodios</string>
+    <string name="name">Nombre</string>
+    <string name="create_an_account">Crea una cuenta</string>
+    <string name="email">Correo elecotrónico</string>
+    <string name="the_password_must_contain_8_characters">La contraseña debe contener 8 caracteres</string>
+    <string name="accept">Aceptar</string>
+    <string name="can_sign_in">Ya puedes iniciar sesión</string>
+    <string name="empty_name">Nombre vacío</string>
+    <string name="empty_email">Email vacío</string>
+    <string name="empty_password">Contraseña vacía</string>
+    <string name="password_length_error">La contraseña debe terni mínimo 8 caracteres</string>
+    <string name="invalid_email">Email inválido</string>
+    <string name="user_exists_error">El usuario ya existe</string>
+    <string name="error_occurred">Ha ocurrido un error</string>
+    <string name="error_login">Email o conrtaseña incorrecta</string>
+
+</resources>

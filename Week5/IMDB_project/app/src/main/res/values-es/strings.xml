@@ -54,5 +54,10 @@
         guerrero, cuando hace amistad con un dragón herido.</string>
     <string name="episode">episodio</string>
     <string name="episodes">episodios</string>
+    <string name="name">Nombre</string>
+    <string name="create_an_account">Crea una cuenta</string>
+    <string name="email">Correo elecotrónico</string>
+    <string name="the_password_must_contain_8_characters">La contraseña debe contener 8 caracteres</string>
+    <string name="accept">Aceptar</string>
 
 </resources>

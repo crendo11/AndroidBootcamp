@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/light_gray">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/homeAppBar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/multiplier_170"
+        android:background="@color/white">
+
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:id="@+id/HomeCollapsingToolBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_scrollFlags="scroll|snap|exitUntilCollapsed"
+            app:title="@string/app_name">
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/multiplier_175"
+                android:contentDescription="@string/stranger_things_movie_trailer"
+                android:scaleType="centerCrop"
+                android:src="@drawable/stranger_things"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_collapseMode="parallax"/>
+
+            <ImageView
+                android:layout_width="@dimen/multiplier_50"
+                android:layout_height="@dimen/multiplier_85"
+                android:layout_marginStart="@dimen/multiplier_15"
+                android:layout_marginTop="@dimen/multiplier_75"
+                android:src="@drawable/stranger_things_thumbnail"
+                app:layout_collapseMode="parallax"
+                android:contentDescription="@string/thumbnail_stranger_things"/>
+
+            <ImageView
+                android:layout_width="@dimen/multiplier_25"
+                android:layout_height="@dimen/multiplier_25"
+                android:src="@drawable/ic_outline_play_circle_outline_24"
+                app:layout_anchor="@+id/appBarLayout"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/multiplier_45"
+                app:tint="@color/white"
+                app:layout_collapseMode="parallax"
+                android:contentDescription="@string/play_button"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/stranger_things"
+                android:textColor="@color/black"
+                android:fontFamily="@font/seconda_round_bold"
+                android:layout_marginTop="@dimen/multiplier_180"
+                android:layout_marginStart="@dimen/multiplier_75"
+                app:layout_collapseMode="parallax"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/official_trailer"
+                android:textColor="@color/black"
+                android:fontFamily="@font/seconda_round_medium"
+                android:layout_marginTop="@dimen/multiplier_145"
+                android:layout_marginStart="@dimen/multiplier_75"
+                app:layout_collapseMode="parallax"/>
+
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior"
+        android:layout_marginTop="@dimen/multiplier_10">
+
+        <LinearLayout
+            tools:ignore="RtlSymmetry"
+            style="@style/imdb_section"
+            android:paddingTop="@dimen/multiplier_10"
+            android:paddingBottom="@dimen/multiplier_10"
+            android:paddingStart="@dimen/multiplier_10">
+
+            <com.example.imdb_project.ui.presentation.customviews.SectionTitleView
+                android:id="@+id/bestSelectionsTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/homeRecyclerView"
+                android:layout_marginTop="@dimen/multiplier_15"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

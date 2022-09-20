@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">IMDb</string>
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+    <string name="forgot_password">Forgot password</string>
+    <string name="or_you_can_sign_in_with">Or you can sign in with</string>
+    <string name="login" translatable="false">Login</string>
+    <string name="login_with_apple">Login with apple</string>
+    <string name="continue_as_guest">Continue as guest</string>
+    <string name="dont_have_an_account">Don\'t have an account?</string>
+    <string name="register">Register</string>
+    <string name="search_hint">Search IMDb</string>
+    <string name="movie_title_holder">Movie Title</string>
+    <string name="movie_year_placeholder">Year</string>
+    <string name="movie_image_res_description">Movie Image</string>
+    <string name="actors_placeholder">Actors</string>
+    <string name="title_httyd">How to train your dragon</string>
+    <string name="queen_south_title">Queen of the South</string>
+    <string name="home">Home</string>
+    <string name="search">Search</string>
+    <string name="play" translatable="false">Play</string>
+    <string name="stranger_things_movie_trailer">Stranger things movie trailer</string>
+    <string name="stranger_things" translatable="false">Stranger Things</string>
+    <string name="official_trailer">Official trailer</string>
+    <string name="thumbnail_stranger_things">Thumbnail Stranger Things</string>
+    <string name="play_button">Play button</string>
+    <string name="best_selections">Best Selections</string>
+    <string name="movie_thumbnail">Movie thumbnail</string>
+    <string name="movie_rating">Movie rating</string>
+    <string name="section_title_holder">Section title</string>
+    <string name="info_button">Info button</string>
+    <string name="bookmark_movie">Bookmark movie</string>
+    <string name="number_of_stars">Number of stars</string>
+    <string name="toolbar_title_placeholder">Title</string>
+    <string name="original_title">Original title</string>
+    <string name="short_description">Short description</string>
+    <string name="movie_preview">Movie preview</string>
+    <string name="genre">Genre</string>
+    <string name="movie_description_placeholder">Movie description</string>
+    <string name="episodes_guide">Episodes guide</string>
+    <string name="number_episodes">Number episodes</string>
+    <string name="add_to_my_wish_list">Add to my wish list</string>
+    <string name="queenpins_synopsis">Two housewives organize a scam that steals millions of
+        dollars from big companies through discount coupons. A policeman and a postal inspector
+        will try to stop the daring scammers.</string>
+    <string name="queen_sugar_synopsis">The Bordelon brothers must put aside their complicated
+        lives in order to unite and manage the clan\'s sugarcane farm.</string>
+    <string name="queens_gambit_synopsis">Orphan and chess prodigy, Beth Harmon, struggles with
+        addiction as she seeks to become the world\'s best chess player</string>
+    <string name="queen_south_synopsis">Teresa Mendoza, a woman from a poor neighborhood,
+        falls in love with a drug lord in Jalisco. When he is murdered, she is forced to go to
+        the United States, where she becomes a wealthy drug trafficker in search of revenge,
+        always on the run from death.</string>
+    <string name="httyd_synopsis">Hiccup, a teenage Viking, begins dragon training classes, and
+        finally sees an opportunity to prove he is capable of becoming a warrior when he befriends
+        a wounded dragon.</string>
+    <string name="episode">episode</string>
+    <string name="episodes">episodes</string>
+    <string name="name">Name</string>
+    <string name="create_an_account">Create an account</string>
+    <string name="email">Email</string>
+    <string name="the_password_must_contain_8_characters">The password must contain 8 characters</string>
+    <string name="accept">Accept</string>
+    <string name="can_sign_in">You can sign in now</string>
+    <string name="empty_name">Empty name</string>
+    <string name="empty_email">Empty email</string>
+    <string name="empty_password">Empty password</string>
+    <string name="password_length_error">Password must have minimum 8 characters</string>
+    <string name="invalid_email">Invalid email</string>
+    <string name="user_exists_error">User already exists</string>
+    <string name="error_occurred">An error occurred</string>
+    <string name="error_login">Incorrect email or password</string>
+</resources>

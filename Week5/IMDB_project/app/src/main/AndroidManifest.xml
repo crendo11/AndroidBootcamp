@@ -32,6 +32,10 @@
             android:name=".ui.presentation.HomeActivity"
             android:exported="true">
         </activity>
+        <activity
+            android:name=".ui.presentation.fragments.RegisterActivity"
+            android:exported="true">
+        </activity>
 
     </application>
 

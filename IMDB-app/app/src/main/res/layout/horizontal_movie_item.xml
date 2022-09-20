@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="@dimen/multiplier_60"
+    android:layout_marginEnd="@dimen/multiplier_5"
+    android:layout_marginStart="@dimen/multiplier_5"
+    android:layout_marginBottom="@dimen/multiplier_10"
+    android:elevation="10dp"
+    android:background="@drawable/shadow"
+    android:layout_height="230dp">
+
+    <ImageView
+        android:id="@+id/horizontalMovieThumbnail"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/multiplier_80"
+        app:layout_constraintTop_toTopOf="parent"
+        android:scaleType="centerCrop"
+        android:contentDescription="@string/movie_thumbnail" />
+
+    <TextView
+        android:id="@+id/movieRating"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/multiplier_17"
+        android:layout_marginTop="@dimen/multiplier_4"
+        android:textSize="@dimen/multiplier_5sp"
+        android:textColor="@color/text_gray"
+        android:text="@string/movie_rating"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/horizontalMovieThumbnail" >
+    </TextView>
+
+    <TextView
+        android:id="@+id/horizontalMovieTitle"
+        android:layout_width="@dimen/multiplier_50"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/multiplier_5"
+        android:layout_marginTop="@dimen/multiplier_4"
+        android:textSize="@dimen/multiplier_5sp"
+        android:textColor="@color/black"
+        android:text="@string/movie_title_holder"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/movieRating">
+    </TextView>
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="@dimen/multiplier_15"
+        android:layout_height="@dimen/multiplier_15"
+        android:src="@drawable/ic_sharp_bookmark_24"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="ContentDescription" />
+
+    <ImageView
+        android:layout_width="@dimen/multiplier_8"
+        android:layout_height="@dimen/multiplier_8"
+        android:src="@drawable/ic_baseline_add_24"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView2"
+        app:layout_constraintEnd_toEndOf="@+id/imageView2"
+        app:layout_constraintStart_toStartOf="@+id/imageView2"
+        app:layout_constraintTop_toTopOf="parent"
+        android:contentDescription="@string/bookmark_movie" />
+
+    <ImageView
+        android:layout_width="@dimen/multiplier_10"
+        android:layout_height="@dimen/multiplier_10"
+        android:src="@drawable/ic_baseline_stars_24"
+        android:layout_marginStart="@dimen/multiplier_5"
+        android:layout_marginTop="5dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/horizontalMovieThumbnail"
+        android:contentDescription="@string/number_of_stars" />
+
+    <ImageView
+        android:layout_width="@dimen/multiplier_8"
+        android:layout_height="@dimen/multiplier_8"
+        android:layout_marginEnd="@dimen/multiplier_3"
+        android:layout_marginBottom="@dimen/multiplier_3"
+        android:src="@drawable/ic_outline_info_24"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:contentDescription="@string/info_button" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
