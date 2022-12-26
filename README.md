@@ -2,6 +2,6 @@
 
 This is the repository with all the files from the bootcamp. Each week is stored on its correponding folder.
 
-### Week 5
+### IMDB App
 
 Folder with app project
