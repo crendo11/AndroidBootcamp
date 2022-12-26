@@ -12,13 +12,11 @@ class UsersRepositoryImpl: UsersRepository {
         UserDatabase.getInstance(App.getContext()).userDao().createUser(userEntity)
     }
 
-    override suspend fun getUserByEmail(email: String): UserModel? {
+    override suspend fun getUserByEmail(email: String): UserModel {
         val user = UserDatabase.getInstance(App.getContext()).userDao().getUserByEmail(email)
-        return if (user != null)  {
+        return run {
             val userMapper = UserMapper()
             userMapper.userEntity2UserModel(user)
-        } else {
-            null
         }
     }
 
