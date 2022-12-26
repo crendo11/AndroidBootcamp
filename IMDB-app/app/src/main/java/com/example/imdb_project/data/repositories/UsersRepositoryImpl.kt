@@ -2,7 +2,6 @@ package com.example.imdb_project.data.repositories
 
 import com.example.imdb_project.App
 import com.example.imdb_project.data.database.UserDatabase
-import com.example.imdb_project.data.database.UserEntity
 import com.example.imdb_project.data.mappers.UserMapper
 import com.example.imdb_project.domain.models.UserModel
 
